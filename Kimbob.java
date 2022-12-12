@@ -8,6 +8,7 @@ public class Kimbob implements MealKit {
 	String spicyLevel = "X"; // 맵기
 	String briefExplain = "구운 김에 밥과 각종 재료들 넣고 말아서 먹는 밥"; // 간단한 설명
 	
+	// MealKit 인터페이스의 구현 클래스이므로 explain 함수 재정의
 	@Override
 	// MealKit 인터페이스의 구현 클래스이므로 explain 함수 재정의
 	public void explain() {
@@ -18,6 +19,7 @@ public class Kimbob implements MealKit {
 		}System.out.println();
 		System.out.println("맵기: " + this.spicyLevel);
 		System.out.println("간단한 설명: " + this.briefExplain);
+		System.out.println("재고: " + this.num);
 	}
 
 }
