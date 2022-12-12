@@ -37,17 +37,17 @@ public class KoFoodsMain {
 		System.out.println("어시오십시오 KoFoods 입니다! 원하시는 메뉴를 클릭해주세요!");
 		while (run) { // run 이 true이면 계속 돌아가는 while문
 			// 원하는 메뉴를 선택
-			System.out.println("1. Find Food  |2. MealKit  |3. Ramyeon   |4. Quit");
+			System.out.println("1. Find Reicipe |2. MealKit  |3. Ramyeon   |4. Quit");
 			orderNum = scan0.nextInt();
 			
-			// 원하는 메뉴가 1번 Find Food 일 때 -> 세부 메뉴까지 선택 후 레시피를 확인할 수 있음, 없는 번호 선택시 에러문구 출력
+			// 원하는 메뉴가 1번 Find Recipe 일 때 -> 세부 메뉴까지 선택 후 레시피를 확인할 수 있음, 없는 번호 선택시 에러문구 출력
 			if (orderNum == 1) {
 				System.out.println("원하시는 번호를 선택해주세요");
 				System.out.println("1. 볶음밥  |2. 비빔밥  |3. 칼국수  ");
 				
 				// 다형성(상속) - 매개변수를 이용한 다형성 구현
 				// Rice 와 Noodle 클래스는 Search 클래스를 상속 받은 자식 클래스로 부모타입인 Search 클래스로 자동 형변환이 가능함
-				// Recipe 클래스에서 Search 클래스 타입의 매개변수를 갖는 함수를 만들고, 함수에 Rice 객체와 Noodㅣe 객체를 넣어 레시피를 출력함
+				// Recipe 클래스에서 Search 클래스 타입의 매개변수를 갖는 함수를 만들고, 함수에 Rice 객체와 Noodle 객체를 넣어 레시피를 출력함
 				Recipe recipe = new Recipe();
 				Scanner scan1 = new Scanner(System.in);
 				foodNum = scan1.nextInt();
@@ -109,7 +109,7 @@ public class KoFoodsMain {
 					System.out.println("");
 					
 				// 2번 요일별 오늘의 라면 추천 -> 요일 + 추천라면을 출력해줌
-				} else {
+				} else if (ramyeonNum == 2){
 					System.out.println("무슨 라면을 살지 고민된다면 요일 별 라면 랜덤 추천 시스템을 이용해보세요!");
 					Week today = null; // 오늘의 요일이 담길 열거 변수
 					Calendar cal = Calendar.getInstance(); // 현재 날짜에 대한 정보를 얻기 위함
@@ -147,8 +147,12 @@ public class KoFoodsMain {
 							System.out.println("토요일의 추천라면은 " + ramyeon.get(rand) + "입니다!");
 							break;
 					}
-					System.out.println("");
+				// 1, 2 이외의 번호는 잘못된 번호이므로 콘솔창에 에러 메세지 출력
+				} else {
+					System.out.println("잘못된 번호입니다");
 				}
+				System.out.println("");
+				
 			// 4번을 입력하면 run 변수에 false를 넣어주면 다음 턴에서 while 문이 멈춘다
 			} else {
 				run = false;
