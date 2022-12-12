@@ -8,7 +8,7 @@ public class Bulgogi implements MealKit {
 	String spicyLevel = "X"; // 맵기
 	String briefExplain = "얇게 썬 쇠고기를 양념장에 묻혀 구워 먹는 한국의 전통음식"; // 간단한 설명
 	
-	// MealKit 인터페이스의 구현 객체이므로 explain 함수를 재정의함
+	// MealKit 인터페이스의 구현 클래스이므로 explain 함수를 재정의함
 	@Override
 	public void explain() {
 		System.out.println("이름: " + this.name);
