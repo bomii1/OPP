@@ -1,7 +1,7 @@
 package koFoods;
 
 public class Bulgogi implements MealKit {
-	int num;
+	int num = 10;
 	String name = "불고기";
 	String[] ingredients = {"소고기", "양파", "당근", "간장", "설탕", "팽이버섯"};
 	String spicyLevel = "X";
@@ -16,6 +16,7 @@ public class Bulgogi implements MealKit {
 		}System.out.println();
 		System.out.println("맵기: " + this.spicyLevel);
 		System.out.println("간단한 설명: " + this.briefExplain);
+		System.out.println("재고: " + this.num);
 	}
 
 
